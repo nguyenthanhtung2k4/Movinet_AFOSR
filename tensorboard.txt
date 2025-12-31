@@ -1,0 +1,8 @@
+
+(base) kientt@ai2:~$ docker run -it --runtime=nvidia -p 1982:6008 -p 1980:8888 -v ~/AFOSR:/AFOSR --name movineta2-base-trainall-docker-jupyter-debug afosr-docker:latest
+
+
+%load_ext tensorboard
+%tensorboard --logdir /AFOSR/afosr2022/movinet/savedmodel/a2/base/logs/ --port 6008 --bind_all
+
+docker run -it --runtime=nvidia -p 1982:6008 -p 1980:8888 -v ~/AFOSR:/AFOSR --name movineta2-base-trainall-docker-jupyter-debug afosr-docker:latest tensorboard --logdir /AFOSR/afosr2022/movinet/savedmodel/a2/base/logs/ --port 6008 --bind_all
